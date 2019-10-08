@@ -1,6 +1,6 @@
 <template>
   <div>
-    <checkAdBlock/>
+    aaa
   </div>
 </template>
 
