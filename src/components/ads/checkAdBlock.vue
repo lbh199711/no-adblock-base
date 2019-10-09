@@ -1,6 +1,6 @@
 <template>
   <div>
-    bbb
+    {{adblock}}
   </div>
 </template>
 
@@ -12,11 +12,16 @@ export default {
   beforeMount() {
     this.detectAdBlock().then((response) => {
       if (response) {
-        console.log('with ad block');
+        this.adblock = true;
       } else {
-        console.log('no ad block');
+        this.adblock = false;
       }
     });
+  },
+  data() {
+    return {
+      adblock: null,
+    };
   },
 };
 </script>
